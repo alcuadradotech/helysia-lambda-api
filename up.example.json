@@ -1,0 +1,18 @@
+{
+    "name":"myapp",
+    "profile":"myapp",
+    "regions":["eu-west-1"],
+    "lambda": {
+      "memory": 512,
+      "timeout": 0,
+      "role": "arn:aws:iam::123456789012:role/myapp-role",
+      "runtime": "nodejs12.x"
+    },
+    "environment": {
+        "CONTRACT": "0x...",
+        "ACCOUNT": "0x...",
+        "PRIVATEKEY": "abc...",
+        "CHAIN": "mainnet"
+    }
+  }
+  

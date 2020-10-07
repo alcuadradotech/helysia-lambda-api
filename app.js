@@ -3,7 +3,7 @@ const bodyParser = require('body-parser');
 const fs = require('fs');
 const path = require('path');
 
-var app = express();
+const app = express();
 
 // Defining the port number. 
 // It is important to set to process.env.PORT 
@@ -12,25 +12,21 @@ const PORT = process.env.PORT || 8080;
 const CHAIN = process.env.CHAIN || 'rinkeby';
 if (CHAIN === 'mainnet') {
     console.log(`WARNING: running on ${CHAIN}`);
-} else {
 }
 // check contract address
 const contractAddress = process.env.CONTRACT;
 if (!contractAddress) {
     console.error("ERROR: no contract address in env");
-    process.exit(1);
 }
 // check account
 const defaultAccount = process.env.ACCOUNT;
 if (!defaultAccount) {
     console.error("ERROR: no account in env");
-    process.exit(1);
 }
 // check private key
 const privateKey = process.env.PRIVATEKEY;
 if (!privateKey) {
     console.error("ERROR: no private key in env");
-    process.exit(1);
 }
 
 // Supporting every type of body content type

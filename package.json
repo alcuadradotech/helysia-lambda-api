@@ -1,0 +1,23 @@
+{
+  "name": "helysia-lambda-api",
+  "version": "1.0.0",
+  "description": "Helysia Token API",
+  "main": "app.js",
+  "directories": {
+    "lib": "lib"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node app",
+    "dev": "node-dev app"
+  },
+  "author": "Víctor Navarro <vnavarro@alcuadrado.tech>",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "cjson": "^0.5.0",
+    "ethereumjs-tx": "^2.1.2",
+    "express": "^4.17.1",
+    "web3": "^1.3.0"
+  }
+}

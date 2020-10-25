@@ -1,7 +1,7 @@
 {
   "name": "helysia-lambda-api",
-  "version": "1.0.0",
-  "description": "Helysia Token API",
+  "version": "2.0.0",
+  "description": "Get balances and send Ether and ERC20 tokens using AWS lambda functions",
   "main": "app.js",
   "directories": {
     "lib": "lib"
@@ -17,7 +17,9 @@
     "body-parser": "^1.19.0",
     "cjson": "^0.5.0",
     "ethereumjs-tx": "^2.1.2",
+    "ethers": "^5.0.16",
     "express": "^4.17.1",
-    "web3": "^1.3.0"
+    "web3": "^1.3.0",
+    "zksync": "^0.7.3"
   }
 }

@@ -1,10 +1,10 @@
-const token = require('../lib/token')
+const token = require('../lib/token');
 
 function init(app) {
-    const path = '/token'
+    const path = '/token';
 
-    app.post(path + '/send', token.send)
-    app.get(path + '/balance', token.balance)
+    app.post(path + '/send', token.send);
+    app.get(path + '/balance', token.balance);
 }
 
 module.exports = init;

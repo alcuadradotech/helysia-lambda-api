@@ -74,6 +74,7 @@ Setup an `up.json` file. You can use the `up.example.json` file.
       "runtime": "nodejs12.x"
     },
     "environment": {
+        "INFURA": "01234...",
         "CONTRACT": "0x...",
         "DAI": "0x...",
         "MARKET": "0x...",

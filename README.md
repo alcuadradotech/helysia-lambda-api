@@ -21,7 +21,7 @@ curl "http://127.0.0.1:8080/token/balance?address=0x..."
 **GET token price**
 ```sh
 curl "http://127.0.0.1:8080/token/price"
-1.1274
+{"EUR":1.1274,"USD":1.3221}
 ```
 
 **GET transaction receipt**

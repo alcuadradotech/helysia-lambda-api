@@ -7,7 +7,7 @@ Get balances and send Ether and ERC20 tokens using AWS lambda functions.
 
 Start the app
 ```sh
-CHAIN=<rinkeby|mainnet> CONTRACT=<token_contract_address> DAI=<dai_contract_address> MARKET=<market_contract_address> AGENT=<agent_contract_address> ACCOUNT=<funded_account> PRIVATEKEY=<private_key> npm start
+INFURA=<infura_key> CHAIN=<rinkeby|mainnet> CONTRACT=<token_contract_address> DAI=<dai_contract_address> MARKET=<market_contract_address> AGENT=<agent_contract_address> ACCOUNT=<funded_account> PRIVATEKEY=<private_key> npm start
 ```
 
 Test using curl

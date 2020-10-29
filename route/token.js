@@ -5,6 +5,7 @@ function init(app) {
 
     app.post(path + '/send', token.send);
     app.get(path + '/balance', token.balance);
+    app.get(path + '/price', token.price);
 }
 
 module.exports = init;

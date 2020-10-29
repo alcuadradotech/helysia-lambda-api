@@ -5,10 +5,37 @@ Get balances and send Ether and ERC20 tokens using AWS lambda functions.
 
 ## Develop
 
+Start the app
 ```sh
-CHAIN=<rinkeby|mainnet> CONTRACT=<token_contract_address> ACCOUNT=<funded_account> PRIVATEKEY=<private_key> npm run dev
+CHAIN=<rinkeby|mainnet> CONTRACT=<token_contract_address> DAI=<dai_contract_address> MARKET=<market_contract_address> AGENT=<agent_contract_address> ACCOUNT=<funded_account> PRIVATEKEY=<private_key> npm start
+```
 
+Test using curl
+
+**GET balances**
+```sh
 curl "http://127.0.0.1:8080/token/balance?address=0x..."
+{"ETH":"4.3612494807","3LY":"15288.76281131092142627"}
+```
+
+**GET token price**
+```sh
+curl "http://127.0.0.1:8080/token/price"
+1.1274
+```
+
+**GET transaction receipt**
+```sh
+curl "http://127.0.0.1:8080/ether/tx?tx=0x..."
+{
+  "tx": {"blockHash":"0x72ca0cca04a8b2b3d0101efd444a21de0dbacfaa11754a35993f57c98925709a",
+    ...},
+  "value": "10000"
+}
+```
+
+**Send ETH and Tokens using POST**
+```sh
 curl -d "address=0x...&tokens=1" "http://127.0.0.1:8080/token/send"
 curl -d "address=0x...&ether=0.01" "http://127.0.0.1:8080/ether/send"
 ```
@@ -48,6 +75,9 @@ Setup an `up.json` file. You can use the `up.example.json` file.
     },
     "environment": {
         "CONTRACT": "0x...",
+        "DAI": "0x...",
+        "MARKET": "0x...",
+        "AGENT": "0X...",
         "ACCOUNT": "0x...",
         "PRIVATEKEY": "abc...",
         "CHAIN": "mainnet"

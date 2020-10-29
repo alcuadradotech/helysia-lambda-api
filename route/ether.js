@@ -5,6 +5,7 @@ function init(app) {
 
     app.post(path + '/send', ether.send)
     app.get(path + '/balance', ether.balance)
+    app.get(path + '/tx', ether.tx); 
 }
 
 module.exports = init;
